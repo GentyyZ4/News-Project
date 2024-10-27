@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <div class="input-group">
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <div class="eye-icon" onclick="togglePassword('loginPassword')">
+                    <img src="view.png" class="view" >
+                </div>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+
+        <h2 style="display:none;" id="signupTitle">Sign Up</h2>
+        <form style="display:none;" id="signupForm">
+            <input type="text" id="signupUsername" placeholder="Username" required>
+            <div class="input-group">
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <div class="eye-icon" onclick="togglePassword('signupPassword')">
+                    <img src="view.png" class="view" >
+                </div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p style="display:none;">Already have an account? <a href="#" id="showLogin">Login</a></p>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
